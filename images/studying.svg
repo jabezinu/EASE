@@ -1,58 +1,137 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
-  <!-- Background elements -->
-  <rect x="0" y="0" width="800" height="600" fill="#f9f9ff" opacity="0.8" />
+  <!-- Enhanced background with gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e6f7ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#f0f5ff;stop-opacity:1" />
+    </linearGradient>
+    <!-- Glow effect -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
   
-  <!-- Desk -->
-  <rect x="150" y="350" width="500" height="20" rx="5" fill="#8b5e3c" />
-  <rect x="180" y="370" width="40" height="150" fill="#6b4423" />
-  <rect x="580" y="370" width="40" height="150" fill="#6b4423" />
+  <!-- Improved background -->
+  <rect x="0" y="0" width="800" height="600" fill="url(#bgGradient)" />
   
-  <!-- Books on desk -->
+  <!-- Improved desk with wood texture -->
+  <rect x="150" y="350" width="500" height="25" rx="8" fill="#9b7653" />
+  <rect x="160" y="355" width="480" height="15" rx="5" fill="#8b5e3c" />
+  <rect x="180" y="370" width="45" height="150" fill="#6b4423" />
+  <rect x="580" y="370" width="45" height="150" fill="#6b4423" />
+  
+  <!-- Decorative desk pattern -->
+  <line x1="200" y1="355" x2="600" y2="355" stroke="#7d5329" stroke-width="1" stroke-dasharray="5,3" />
+  
+  <!-- Enhanced books on desk with shadows -->
   <rect x="220" y="300" width="120" height="50" rx="5" fill="#4a6bff" />
+  <rect x="225" y="300" width="110" height="5" rx="2" fill="#3a5bef" />
   <rect x="230" y="290" width="100" height="50" rx="5" fill="#e74c3c" />
+  <rect x="235" y="290" width="90" height="5" rx="2" fill="#d73c2c" />
   <rect x="240" y="280" width="80" height="50" rx="5" fill="#2ecc71" />
+  <rect x="245" y="280" width="70" height="5" rx="2" fill="#27ae60" />
   
-  <!-- Notebook on desk -->
-  <rect x="400" y="320" width="150" height="30" rx="2" fill="#f5f5f5" />
-  <line x1="430" y1="325" x2="520" y2="325" stroke="#333" stroke-width="1" />
-  <line x1="430" y1="335" x2="500" y2="335" stroke="#333" stroke-width="1" />
-  <line x1="430" y1="345" x2="510" y2="345" stroke="#333" stroke-width="1" />
+  <!-- Book details -->
+  <text x="260" y="315" font-family="Arial" font-size="12" fill="#fff">MATH</text>
+  <text x="255" y="325" font-family="Arial" font-size="8" fill="#fff" opacity="0.7">Grade 8</text>
   
-  <!-- Pencil -->
+  <!-- Enhanced notebook on desk with paper texture -->
+  <rect x="400" y="320" width="150" height="30" rx="2" fill="#f9f9f9" />
+  <rect x="400" y="320" width="150" height="30" rx="2" fill="#eee" opacity="0.3" />
+  <line x1="430" y1="325" x2="530" y2="325" stroke="#666" stroke-width="1" />
+  <line x1="430" y1="335" x2="520" y2="335" stroke="#666" stroke-width="1" />
+  <line x1="430" y1="345" x2="510" y2="345" stroke="#666" stroke-width="1" />
+  <line x1="405" y1="320" x2="405" y2="350" stroke="#ff9999" stroke-width="1" />
+  
+  <!-- Improved pencil -->
   <line x1="400" y1="335" x2="360" y2="335" stroke="#f1c40f" stroke-width="5" />
+  <line x1="400" y1="335" x2="360" y2="335" stroke="#e5b80d" stroke-width="4" />
   <polygon points="360,332 350,335 360,338" fill="#333" />
+  <polygon points="400,333 395,335 400,337" fill="#f7dc6f" />
   
-  <!-- Student character -->
-  <!-- Head -->
-  <circle cx="400" cy="200" r="50" fill="#ffd699" />
+  <!-- Modern student character with better proportions -->
+  <!-- Head with better skin tone -->
+  <circle cx="400" cy="200" r="50" fill="#ffdbac" />
+  <circle cx="400" cy="200" r="48" fill="#ffe0b2" />
   
-  <!-- Face -->
-  <circle cx="380" cy="190" r="5" fill="#333" /> <!-- Left eye -->
-  <circle cx="420" cy="190" r="5" fill="#333" /> <!-- Right eye -->
-  <path d="M390 215 Q400 225 410 215" stroke="#333" stroke-width="3" fill="none" /> <!-- Smile -->
+  <!-- Improved face -->
+  <ellipse cx="380" cy="190" rx="8" ry="6" fill="#fff" /> <!-- White of left eye -->
+  <circle cx="380" cy="190" r="4" fill="#553c2b" /> <!-- Left eye -->
+  <circle cx="380" cy="190" r="1.5" fill="#000" /> <!-- Left pupil -->
   
-  <!-- Hair -->
-  <path d="M400 150 Q430 160 440 190 Q450 170 430 150 Q410 140 400 150" fill="#333" />
-  <path d="M400 150 Q370 160 360 190 Q350 170 370 150 Q390 140 400 150" fill="#333" />
+  <ellipse cx="420" cy="190" rx="8" ry="6" fill="#fff" /> <!-- White of right eye -->
+  <circle cx="420" cy="190" r="4" fill="#553c2b" /> <!-- Right eye -->
+  <circle cx="420" cy="190" r="1.5" fill="#000" /> <!-- Right pupil -->
   
-  <!-- Body -->
-  <path d="M400 250 L380 350 L420 350 Z" fill="#3498db" />
+  <!-- Eyebrows -->
+  <path d="M370 180 Q380 175 390 180" stroke="#333" stroke-width="2" fill="none" />
+  <path d="M410 180 Q420 175 430 180" stroke="#333" stroke-width="2" fill="none" />
   
-  <!-- Arms -->
-  <path d="M380 270 L330 320 L340 330 L390 280" fill="#ffd699" />
-  <path d="M420 270 L470 320 L460 330 L410 280" fill="#ffd699" />
+  <!-- Better smile -->
+  <path d="M385 215 Q400 230 415 215" stroke="#333" stroke-width="3" fill="none" />
+  <path d="M387 218 Q400 228 413 218" stroke="#b91d47" stroke-width="2" fill="none" />
   
-  <!-- Thinking bubble -->
+  <!-- Blush -->
+  <circle cx="370" cy="205" r="10" fill="#ffb6c1" opacity="0.3" />
+  <circle cx="430" cy="205" r="10" fill="#ffb6c1" opacity="0.3" />
+  
+  <!-- Modern hairstyle -->
+  <path d="M400 150 Q430 160 445 190 Q460 170 440 150 Q420 130 400 150" fill="#2c2c2c" />
+  <path d="M400 150 Q370 160 355 190 Q340 170 360 150 Q380 130 400 150" fill="#2c2c2c" />
+  <path d="M365 155 Q380 145 400 150 Q420 145 435 155" fill="#2c2c2c" />
+  
+  <!-- Highlights in hair -->
+  <path d="M420 155 Q430 145 425 135" stroke="#555" stroke-width="3" fill="none" />
+  <path d="M380 155 Q370 145 375 135" stroke="#555" stroke-width="3" fill="none" />
+  
+  <!-- Improved body with better hoodie -->
+  <path d="M400 250 L370 350 L430 350 Z" fill="#4a89dc" />
+  <path d="M400 250 L380 300 L420 300 Z" fill="#5d9cec" />
+  
+  <!-- Hoodie details -->
+  <path d="M390 255 L385 300 L395 300 L390 255" fill="#396bbd" />
+  <path d="M410 255 L415 300 L405 300 L410 255" fill="#396bbd" />
+  <line x1="385" y1="270" x2="415" y2="270" stroke="#396bbd" stroke-width="2" />
+  
+  <!-- Better arms with shading -->
+  <path d="M380 270 L330 320 L340 330 L390 280" fill="#ffdbac" />
+  <path d="M420 270 L470 320 L460 330 L410 280" fill="#ffdbac" />
+  <path d="M380 270 L330 320 L335 325 L385 275" fill="#edc9af" opacity="0.3" />
+  <path d="M420 270 L470 320 L465 325 L415 275" fill="#edc9af" opacity="0.3" />
+  
+  <!-- Enhanced thinking bubble -->
   <circle cx="500" cy="120" r="40" fill="#fff" stroke="#333" stroke-width="2" />
   <circle cx="530" cy="90" r="25" fill="#fff" stroke="#333" stroke-width="2" />
   <circle cx="550" cy="70" r="15" fill="#fff" stroke="#333" stroke-width="2" />
   
-  <!-- Math symbols in thinking bubble -->
-  <text x="490" y="125" font-family="Arial" font-size="14" fill="#333">A+</text>
-  <text x="525" y="95" font-family="Arial" font-size="10" fill="#333">✓</text>
-
-  <!-- Animation: subtle glow around character -->
-  <circle cx="400" cy="240" r="100" fill="#4a6bff" opacity="0.1">
-    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="3s" repeatCount="indefinite" />
+  <!-- More educational symbols in thinking bubble -->
+  <text x="490" y="125" font-family="Arial" font-weight="bold" font-size="16" fill="#4a89dc">A+</text>
+  <text x="525" y="95" font-family="Arial" font-size="10" fill="#27ae60">✓</text>
+  <text x="548" y="74" font-family="Arial" font-size="8" fill="#e74c3c">!</text>
+  
+  <!-- Plant decoration on desk -->
+  <rect x="580" y="305" width="30" height="45" rx="2" fill="#d35400" />
+  <path d="M595 305 Q585 290 580 280 Q590 285 595 280 Q600 285 610 280 Q605 290 595 305" fill="#27ae60" />
+  <path d="M595 305 Q600 290 610 270 Q600 280 595 275 Q590 280 580 270 Q590 290 595 305" fill="#2ecc71" />
+  
+  <!-- Enhanced animation: subtle glow around character -->
+  <circle cx="400" cy="240" r="110" fill="#4a89dc" opacity="0.08" filter="url(#glow)">
+    <animate attributeName="opacity" values="0.08;0.15;0.08" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="r" values="110;115;110" dur="3s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Floating particles around character -->
+  <circle cx="350" cy="150" r="3" fill="#4a89dc" opacity="0.6">
+    <animate attributeName="cy" values="150;145;150" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="450" cy="170" r="2" fill="#4a89dc" opacity="0.6">
+    <animate attributeName="cy" values="170;165;170" dur="2.5s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.9;0.6" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="420" cy="120" r="2" fill="#4a89dc" opacity="0.6">
+    <animate attributeName="cy" values="120;115;120" dur="3s" repeatCount="indefinite" />
+    <animate attributeName="opacity" values="0.6;0.9;0.6" dur="3s" repeatCount="indefinite" />
   </circle>
 </svg> 
